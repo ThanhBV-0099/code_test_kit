@@ -66,13 +66,13 @@ static void MX_ADC1_Init(void);
   * @retval int
   */
 uint32_t adc_value=0;
-//void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
-//{
-//	if(hadc ->Instance == hadc1.Instance)
-//	{
-//		adc_value = HAL_ADC_GetValue(&hadc1);
-//	}
-//}
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc)
+{
+	if(hadc ->Instance == hadc1.Instance)
+	{
+		adc_value = HAL_ADC_GetValue(&hadc1);
+	}
+}
 
 int main(void)
 {
